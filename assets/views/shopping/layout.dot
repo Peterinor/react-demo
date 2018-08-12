@@ -9,13 +9,9 @@
 
     <title>{{= it.title }} - shopping</title>
 
-    <link href="/scripts/bootstrap/dist/css/bootstrap-black.min.css" rel="stylesheet" media="screen" />
-    <!--<script src="/scripts/js/jquery.min.js"></script> -->
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     {{= it.body }}
-
-    <!-- <script src="/scripts/bootstrap/dist/js/bootstrap.min.js"></script> -->
 </body>
 </html>

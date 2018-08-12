@@ -2,7 +2,7 @@
     .add-form input {
         width: 300px;
     }
-
+    
     .add-form button {
         margin-left: 622px;
     }

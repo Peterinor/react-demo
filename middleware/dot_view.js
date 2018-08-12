@@ -1,6 +1,7 @@
 //
 
 var doT = require('dot');
+doT.log = false;
 
 var fs = require('fs');
 var path = require('path');
@@ -31,7 +32,6 @@ module.exports = function (options) {
 							path: px
 						}
 						var dx = dots[f] = doT.process(op);
-
 						if (layout) {
 							if (!dx[layout]) throw 'layout <' + layout + '> does not exist...';
 						}
@@ -44,9 +44,10 @@ module.exports = function (options) {
 
 	compile(options.path);
 
-
 	var hk = null;
-	fs.watch(options.path, (type, files) => {
+	fs.watch(options.path, {
+		recursive: true,
+	}, (type, files) => {
 		if (hk) clearTimeout(hk);
 		hk = setTimeout(function () {
 			compile(options.path);

@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        shopping: './assets/scripts/index.jsx',
+        shopping: './assets/scripts/shopping.jsx',
         flight: './assets/scripts/flight.jsx'
     },
     output: {
@@ -13,5 +13,5 @@ module.exports = {
         rules: [
             { test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/ }
         ]
-    }``
+    }
 };
