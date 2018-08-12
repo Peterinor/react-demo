@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
+
+import ProcessDemo from './demo/Process'
+import TextFields from './demo/Form'
+import ButtonAppBar from './demo/ButtonAppBar'
+import Grid from './demo/Grid'
 
 function App() {
   return (
-    <Button variant="contained" color="primary">
-      <Icon>star</Icon> Hello World
-    </Button>
+    <div>
+      <ButtonAppBar />
+      <Grid />
+      <TextFields />
+    </div>
   );
 }
 

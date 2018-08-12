@@ -4,11 +4,10 @@ var Koa = require('koa');
 var koaBody = require('koa-body');
 var koaStatic = require('koa-static');
 
-var config = require('./webpack.config')
-
 const app = new Koa();
 
-require('./middleware/hot-pack.js')(config);
+// hot webpack
+require('./middleware/hot-pack.js')(require('./webpack.config'));
 
 // for static files
 app.use(koaStatic(__dirname + '/assets'));
