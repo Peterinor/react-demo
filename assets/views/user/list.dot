@@ -1,0 +1,45 @@
+
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="../" class="navbar-brand">shopping mgmt.</a>
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="page-header" id="banner">
+		<div class="row">
+			<div class="col-lg-8 col-md-7 col-sm-6">
+				<h1>users</h1>
+			</div>
+		</div>
+	</div>
+	<div><a class="btn btn-default" href="add" style="padding-left:15px;">Add</a></div>
+	{{?it.errMsg}}
+        <p style="font-size: 16px;" class="text-warning">{{=it.errMsg}}</p>
+    {{?}}
+	<table class="table table-strip">
+		<tbody>
+			<thead>
+				<td>id</td>
+				<td>name</td>
+				<td>birth</td>
+				<td>ops</td>
+			</thead>
+			{{~it.users:u}}
+				<tr>
+					<td name="id">{{=u.id}}</td>
+					<td name="name">{{=u.name}}</td>
+					<td name="birth">{{=u.birth}}</td>
+					<td><form style="display:inline" action="edit" method="get"><input style="display:none" name="id" value={{=u.id}}><button class="btn btn-link" type="submit">Edit</button></form> | <form style="display:inline" action="delete" method="post"><input style="display:none" name="id" value={{=u.id}}><button class="btn btn-link" type="submit">Del</button></form></td>
+				</tr>
+			{{~}}
+		</tbody>
+  </table>
+</div>
