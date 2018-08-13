@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ProcessDemo from './demo/Process'
-import TextFields from './demo/Form'
-import ButtonAppBar from './demo/ButtonAppBar'
-import Grid from './demo/Grid'
+import AppBar from './shopping/AppBar';
+import SearchingForm from './shopping/SearchingForm';
+// import ShoppingSteps from './shopping/ShoppingSteps';
 
 function App() {
   return (
     <div>
-      <ButtonAppBar />
-      <Grid />
-      <TextFields />
+      <AppBar />
+      {/* <ShoppingSteps /> */}
+      <SearchingForm />
     </div>
   );
 }

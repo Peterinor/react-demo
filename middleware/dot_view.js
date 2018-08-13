@@ -50,7 +50,11 @@ module.exports = function (options) {
 	}, (type, files) => {
 		if (hk) clearTimeout(hk);
 		hk = setTimeout(function () {
-			compile(options.path);
+			try {
+				compile(options.path);
+			} catch (e) {
+				console.err(e);
+			}
 		}, 1000);
 	});
 

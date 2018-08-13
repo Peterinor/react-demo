@@ -12,10 +12,16 @@ module.exports = {
     module: {
         rules: [
             { test: /\.jsx$/, use: ['babel-loader'], exclude: /node_modules/ },
-            { test: /\.less$/, loader: 'style!css!less' }
+            // { test: /\.less$/, loader: 'style!css!less' }
         ]
     },
     resolve: {
         extensions: [".js", ".jsx"]
-    }
+    },
+    externals: {
+        "react": "React",
+        "react-dom": "ReactDOM",
+    },
+    // addition - add source-map support
+    devtool: "source-map"
 };
