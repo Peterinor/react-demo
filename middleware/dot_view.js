@@ -1,7 +1,7 @@
 //
 
 var doT = require('dot');
-doT.log = false;
+// doT.log = false;
 
 var fs = require('fs');
 var path = require('path');
