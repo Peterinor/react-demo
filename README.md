@@ -1,7 +1,7 @@
-webproxy
+react shopping demo
 ===============
 
-web proxy with koa @ nodejs
+a flight shopping demo with koa and react @ nodejs
 
 
 -----------
